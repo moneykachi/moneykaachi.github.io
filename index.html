@@ -67,3 +67,133 @@
     <script src="script.js"></script>
 </body>
 </html>
+:root {
+    --primary: #0078d7;
+    --secondary: #005ea6;
+    --background: #f9f9f9;
+    --text: #222;
+    --accent: #f7b500;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+header {
+    background: linear-gradient(90deg, var(--primary) 50%, var(--secondary) 100%);
+    color: white;
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #222;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 18px;
+    transition: background 0.2s;
+}
+.cta-btn:hover {
+    background: #ffd34d;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.schedule li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ececec;
+    font-size: 1.1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+form input, form button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+}
+form input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+form button:hover {
+    background: var(--secondary);
+}
+
+#form-msg {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+footer {
+    background: #232323;
+    color: #eee;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 0.95rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    header {
+        padding: 40px 0 20px 0;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    }document.getElementById("registration-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("form-msg").textContent = "Thank you for registering! See you at the event 🚀";
+    this.reset();
+});
